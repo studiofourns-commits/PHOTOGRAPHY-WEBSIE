@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Four.ns | Premium Photography</title>
+    <meta name="description" content="Studio Four.ns - Capturing your best moments with elegance and style. Premium photography services for weddings, portraits, and events.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0a',
+                        darker: '#050505',
+                        accent: '#d4af37', // Gold accent
+                        light: '#f5f5f5',
+                        muted: '#a3a3a3'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="bg-dark text-light font-sans antialiased overflow-x-hidden selection:bg-accent selection:text-dark">
+
+    <!-- Navigation -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent py-6 px-6 md:px-12 flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-serif font-bold tracking-wider z-50 relative">Studio Four<span class="text-accent">.ns</span></a>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex gap-8 items-center">
+            <a href="index.html" class="text-sm uppercase tracking-widest text-accent font-medium nav-link active transition-colors">Home</a>
+            <a href="gallery.html" class="text-sm uppercase tracking-widest text-light hover:text-accent font-medium nav-link transition-colors">Gallery</a>
+            <a href="about.html" class="text-sm uppercase tracking-widest text-light hover:text-accent font-medium nav-link transition-colors">About</a>
+            <a href="contact.html" class="text-sm uppercase tracking-widest text-light hover:text-accent font-medium nav-link transition-colors">Contact</a>
+            <a href="contact.html" class="px-5 py-2 border border-accent text-accent hover:bg-accent hover:text-dark transition-all duration-300 text-sm uppercase tracking-widest rounded-sm ml-4">Book Now</a>
+        </nav>
+
+        <!-- Mobile Menu Btn -->
+        <button id="mobile-menu-btn" class="md:hidden z-50 text-light focus:outline-none">
+            <i class="ph ph-list text-3xl"></i>
+        </button>
+
+        <!-- Mobile Nav -->
+        <div id="mobile-nav" class="fixed inset-0 bg-darker/95 backdrop-blur-md z-40 transform translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8">
+            <a href="index.html" class="text-2xl uppercase tracking-widest text-accent font-serif nav-link transition-colors">Home</a>
+            <a href="gallery.html" class="text-2xl uppercase tracking-widest text-light hover:text-accent font-serif nav-link transition-colors">Gallery</a>
+            <a href="about.html" class="text-2xl uppercase tracking-widest text-light hover:text-accent font-serif nav-link transition-colors">About</a>
+            <a href="contact.html" class="text-2xl uppercase tracking-widest text-light hover:text-accent font-serif nav-link transition-colors">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-b after:from-darker/60 after:via-darker/40 after:to-dark">
+            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2000&auto=format&fit=crop" alt="Photography background" class="w-full h-full object-cover hero-img-zoom">
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl fade-up-element">
+            <p class="text-accent text-sm md:text-base uppercase tracking-[0.3em] font-medium mb-4">Capturing the unseen</p>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold leading-tight mb-6">Visual <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-yellow-200">Poetry</span></h1>
+            <p class="text-lg md:text-xl text-muted font-light max-w-2xl mx-auto mb-10">We freeze fleeting moments in time, transforming temporary emotions into eternal masterpieces. Welcome to Studio Four.ns.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="gallery.html" class="px-8 py-4 bg-accent text-dark font-medium uppercase tracking-widest hover:bg-white transition-colors duration-300">View Portfolio</a>
+                <a href="contact.html" class="px-8 py-4 border border-white/30 text-white font-medium uppercase tracking-widest hover:bg-white/10 transition-colors duration-300 backdrop-blur-sm">Get in Touch</a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce cursor-pointer z-10" onclick="window.scrollTo(0, window.innerHeight)">
+            <span class="text-xs uppercase tracking-widest text-muted">Discover</span>
+            <i class="ph ph-arrow-down text-accent"></i>
+        </div>
+    </section>
+
+    <!-- Services / Introduction -->
+    <section class="py-24 px-6 md:px-12 bg-dark">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+            <div class="lg:w-1/2 fade-up-element reveal">
+                <p class="text-accent text-sm uppercase tracking-widest mb-2">Our Expertise</p>
+                <h2 class="text-4xl md:text-5xl font-serif mb-6 leading-tight">Mastering the Art of Light & Shadow</h2>
+                <p class="text-muted leading-relaxed mb-8">At Studio Four.ns, we believe every frame tells a story. Our approach blends technical precision with raw emotional intuition to create imagery that speaks volumes. Whether it's the intimacy of a wedding, the edge of a fashion shoot, or the essence of a portrait, we deliver visual excellence.</p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full border border-accent/30 flex items-center justify-center shrink-0 text-accent">
+                            <i class="ph ph-camera text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-serif mb-1">Portrait Photography</h3>
+                            <p class="text-sm text-muted">Capturing your authentic self with striking detail.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full border border-accent/30 flex items-center justify-center shrink-0 text-accent">
+                            <i class="ph ph-users text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-serif mb-1">Wedding & Events</h3>
+                            <p class="text-sm text-muted">Documenting your most precious milestones.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full border border-accent/30 flex items-center justify-center shrink-0 text-accent">
+                            <i class="ph ph-building text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-serif mb-1">Commercial & Fashion</h3>
+                            <p class="text-sm text-muted">Elevating brands with high-end visual aesthetics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2 relative fade-up-element reveal delay-100">
+                <div class="aspect-[4/5] overflow-hidden rounded-sm relative z-10 w-4/5 ml-auto">
+                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=800&auto=format&fit=crop" alt="Portrait photography" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="absolute bottom-10 left-0 aspect-square w-1/2 border-[10px] border-dark overflow-hidden rounded-sm z-20 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=800&auto=format&fit=crop" alt="Wedding photography" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="absolute -z-10 top-1/2 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Works -->
+    <section class="py-24 px-6 md:px-12 bg-darker">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 fade-up-element reveal">
+                <div>
+                    <p class="text-accent text-sm uppercase tracking-widest mb-2">Portfolio</p>
+                    <h2 class="text-4xl md:text-5xl font-serif">Selected Works</h2>
+                </div>
+                <a href="gallery.html" class="group flex items-center gap-2 text-sm uppercase tracking-widest hover:text-accent transition-colors mt-6 md:mt-0">
+                    View All Gallery <i class="ph ph-arrow-right transform group-hover:translate-x-2 transition-transform"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <a href="gallery.html" class="group relative overflow-hidden aspect-[4/5] fade-up-element reveal">
+                    <img src="https://images.unsplash.com/photo-1521747116042-5a810fda9664?q=80&w=800&auto=format&fit=crop" alt="Urban Life" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-accent text-xs uppercase tracking-widest mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Event</span>
+                        <h3 class="text-2xl font-serif text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">Neon Nights</h3>
+                    </div>
+                </a>
+                
+                <!-- Project 2 -->
+                <a href="gallery.html" class="group relative overflow-hidden aspect-[4/5] fade-up-element reveal delay-100 lg:translate-y-10">
+                    <img src="https://images.unsplash.com/photo-1604076913837-52ab5629fba9?q=80&w=800&auto=format&fit=crop" alt="Fashion Shoot" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-accent text-xs uppercase tracking-widest mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Fashion</span>
+                        <h3 class="text-2xl font-serif text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">Vogue Essence</h3>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="gallery.html" class="group relative overflow-hidden aspect-[4/5] fade-up-element reveal delay-200">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800&auto=format&fit=crop" alt="Nature Portrait" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-accent text-xs uppercase tracking-widest mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Nature</span>
+                        <h3 class="text-2xl font-serif text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">Wild Beauty</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial/Quote -->
+    <section class="py-32 px-6 relative overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 -z-10 opacity-20">
+            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1600&auto=format&fit=crop" alt="Background Texture" class="w-full h-full object-cover grayscale">
+            <div class="absolute inset-0 bg-darker/80"></div>
+        </div>
+        <div class="max-w-4xl mx-auto text-center fade-up-element reveal">
+            <i class="ph-fill ph-quotes text-4xl text-accent/50 mb-8 inline-block"></i>
+            <h2 class="text-3xl md:text-5xl font-serif italic font-light leading-relaxed mb-8">"Photography is not about the cameras, gadgets and gismos. Photography is about photographers. A camera didn't make a great picture any more than a typewriter wrote a great novel."</h2>
+            <p class="uppercase tracking-[0.2em] text-accent text-sm">— Studio Four.ns Philosophy</p>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <footer class="bg-dark pt-24 pb-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-16 pb-16 border-b border-white/10 fade-up-element reveal">
+                <h2 class="text-4xl md:text-5xl font-serif mb-6 md:mb-0">Ready to create <br>something <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-yellow-200 italic">beautiful?</span></h2>
+                <a href="contact.html" class="px-10 py-5 bg-light text-dark font-medium uppercase tracking-widest hover:bg-accent hover:text-dark transition-all duration-300 relative group overflow-hidden">
+                    <span class="relative z-10">Start a Project</span>
+                    <div class="absolute inset-0 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out z-0"></div>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <a href="index.html" class="text-3xl font-serif font-bold tracking-wider mb-6 inline-block">Studio Four<span class="text-accent">.ns</span></a>
+                    <p class="text-muted max-w-sm mb-6">Premium photography services capturing the essence of life's most beautiful moments with artistic precision.</p>
+                    <div class="flex gap-4 text-xl">
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:text-dark hover:border-accent transition-all"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:text-dark hover:border-accent transition-all"><i class="ph ph-facebook-logo"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:text-dark hover:border-accent transition-all"><i class="ph ph-twitter-logo"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-accent hover:text-dark hover:border-accent transition-all"><i class="ph ph-behance-logo"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white uppercase tracking-widest text-sm mb-6 font-medium">Pages</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-muted hover:text-accent transition-colors">Home</a></li>
+                        <li><a href="gallery.html" class="text-muted hover:text-accent transition-colors">Gallery</a></li>
+                        <li><a href="about.html" class="text-muted hover:text-accent transition-colors">About</a></li>
+                        <li><a href="contact.html" class="text-muted hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white uppercase tracking-widest text-sm mb-6 font-medium">Contact</h4>
+                    <ul class="space-y-3 text-muted">
+                        <li>studiofour.ns@example.com</li>
+                        <li>+94 77 123 4567</li>
+                        <li>Colombo, Sri Lanka</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center text-sm text-muted/60 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; <span id="year"></span> Studio Four.ns. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Designed with <i class="ph-fill ph-heart text-accent mx-1"></i> for impact.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
